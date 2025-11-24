@@ -3,8 +3,8 @@
 
         <?php
 
-        use yii\helpers\Html;
-        use yii\widgets\ActiveForm;
+        use yii\bootstrap5\Html;
+        use yii\bootstrap5\ActiveForm;
 
         $form = ActiveForm::begin([
             'id' => 'change-form',
@@ -12,7 +12,7 @@
 
         <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
 
-        <?= $form->field($model, 'phone')->passwordInput() ?>
+        <?= $form->field($model, 'phone')->textInput(['autofocus' => true]) ?>
 
         <div class="form-group">
             <div>

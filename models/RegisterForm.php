@@ -32,7 +32,7 @@ class RegisterForm extends Model
     {
         return [
             [['name', 'surname', 'patronymic', 'email', 'phone', 'passport_type_id', 'passport_expire', 'passport_number', 'password'], 'required'],
-            ['passport_another', 'safe'],
+            ['passport_another', 'string', 'max' => 255],
             [['name', 'surname', 'patronymic'], 'match', 'pattern' => '/(?=.*[-])[а-яa-z]/', 'message' => 'Должно содеражать латиницу или кириллицу и тире'],
             ['email', 'email'],
             ['phone', 'match', 'pattern' => '/^\+\d{11}$/', 'message' => 'Введите номер телефона: + в начале и 11 цифр'],
